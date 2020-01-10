@@ -4,21 +4,21 @@ import Info from "./Info";
 function Results({ results }) {
   return (
     <div className="text-gray-700">
-      <p>DME: {results.dme} gram</p>
+      <p>DME: <span className="font-bold">{results.dme} gram</span></p>
       <Info>Amount of Dry Malt Extract required for the starter</Info>
-      <p>Total Yeast: {Math.round(results.totalYeast)} B. Cells </p>
+      <p>Total Yeast: <span className="font-bold">{Math.round(results.totalYeast)} B. Cells</span> </p>
       <Info>Amount of Yeast Cells from the first starter.</Info>
       <div className="mb-2 pb-2 border-b border-gray-600" />
       <p>
-        Long term Pitch cells: {Math.round(results.advancedMetrics.pitch)} B.
-        Cells
+        Long term Pitch cells: <span className="font-bold">{Math.round(results.advancedMetrics.pitch)} B.
+        Cells</span>
       </p>
       <Info>
         The amount of yeast cells you'll have left over for pitching after
         multiple cycles of building a starter. For details see the table below.
       </Info>
 
-      <p> Build Factor: {results.advancedMetrics.buildFactor}</p>
+      <p> Build Factor: <span className="font-bold">{results.advancedMetrics.buildFactor}</span></p>
       <Info>
         Resulting Yeast Cells / Initial Yeast Cells. This rate should be equal
         or lower than 10. (Citation needed)
